@@ -7,28 +7,14 @@ PyHex is a simple python Hex editor
 
 
 
-def to_hex2(file):
-                
-    filename = file
-    file_content = bytes
-    hex_array = []
-    hex_array_len = 0
-
-    file_content = open(filename, "rb").readlines()
-    for line in file_content:
-        for byte in line:
-                hex_array_len += 1
-                hex_byte = hex(byte).replace("x", "").upper()
-                if byte >= 16:
-                    hex_byte = hex_byte.lstrip("0")
-                hex_array.append(hex_byte)
-        print(hex_array)
 
 
 
 
-def to_binary(hex_array):
-    print(len(hex_array))
+
+
+
+
 
 
 
@@ -93,7 +79,6 @@ class HexFile:
 
 
 if __name__ == '__main__':
-    
-    to_hex2("debug.txt")
+    file_to_hex("debug.txt")
                 
 
